@@ -2,6 +2,9 @@ package zad1.testJBehave.steps;
 
 import org.jbehave.core.annotations.*;
 import org.jbehave.core.steps.Steps;
+import org.jbehave.core.annotations.BeforeScenario;
+import org.jbehave.core.annotations.AfterScenario;
+import org.jbehave.core.annotations.AfterScenario.Outcome;
 import zad1.testJBehave.FizzBuzz;
 
 import static org.junit.jupiter.api.Assertions.*;

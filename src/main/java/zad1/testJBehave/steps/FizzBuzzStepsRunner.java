@@ -9,6 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FizzBuzzStepsRunner  extends Steps{
     private FizzBuzz fizzbuzz;
 
+    @BeforeScenario(uponType = ScenarioType.ANY)
+    public void beforeAnyScenario() {
+        System.out.println("Another scenario...");
+    }
+    
     @Given("Fizz buzz class")
     public void givenClassIHave() {
         fizzbuzz = new FizzBuzz();
@@ -29,5 +34,14 @@ public class FizzBuzzStepsRunner  extends Steps{
     @When("number = $number")
     public void whenNumber(@Named("number") int number) {
         fizzbuzz.setNumber(number);
+    }
+    
+    @AfterScenario(uponType = ScenarioType.NORMAL, uponOutcome = Outcome.SUCCESS)
+    public void success() {
+        System.out.println("Scenario success!");
+    }
+    @AfterScenario(uponType = ScenarioType.NORMAL, uponOutcome = Outcome.FAILURE)
+    public void fail() {
+        System.out.println("Scenario fail!");
     }
 }

@@ -25,7 +25,7 @@ import zad1.testJBehave.steps.FizzBuzzStepsRunner;
  * @author funktapuss
  *
  */
-public class QuadraticFunctionRunnerStories extends JUnitStories {
+public class FizzBuzzRunnerStories extends JUnitStories {
 
     @Override
     public Configuration configuration(){

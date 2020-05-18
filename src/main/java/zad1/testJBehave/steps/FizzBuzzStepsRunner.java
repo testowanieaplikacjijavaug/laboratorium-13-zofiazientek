@@ -35,7 +35,7 @@ public class FizzBuzzStepsRunner  extends Steps{
         assertThrows(Exception.class, () -> fizzbuzz.check(number));
     }
     @When("number = $number")
-    public void whenNumber(@Named("number") int number = 0) {
+    public void whenNumber(@Named("number") int number) {
         fizzbuzz.setNumber(number);
     }
     

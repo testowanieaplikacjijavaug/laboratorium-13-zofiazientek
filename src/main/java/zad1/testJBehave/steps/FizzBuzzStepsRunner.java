@@ -14,8 +14,7 @@ public class FizzBuzzStepsRunner  extends Steps{
         fizzbuzz = new FizzBuzz();
     }
     @Then("result I get: FizzBuzz")
-    @Aliases(values={
-		"result I get: FizzBuzz","result received: FizzBuzz"})
+    @Aliases(values={"result I get: FizzBuzz","result received: FizzBuzz"})
     public void thenFizzBuzzAsResult(@Named("number") int number) {
         assertEquals("FizzBuzz",fizzbuzz.check(number));
     }
